@@ -2,7 +2,7 @@
 import rp from 'request-promise';
 import { SerializeCookieStore } from 'tough-cookie-serialize';
 
-const LOGIN_URL = 'https://secure.nicovideo.jp/secure/login';
+export const LOGIN_URL = 'https://secure.nicovideo.jp/secure/login';
 
 export default class NicoClient {
   constructor() {}
