@@ -13,12 +13,12 @@ const password = process.argv[3];
 
 let client = new nicoClient();
 // ログイン
-client.login(email, password)
-  .then(function(session){
-    console.log(session);
-  });
+//client.login(email, password)
+//  .then(function(session){
+//    console.log(session);
+//  });
 
-const live_number = 281432864;
+const live_number = 281442901;
 const session = 'user_session=user_session_13294831_cc4532331cdd38e320f524400869ddfc684c590a7921167b9fa7496bf071a602;';
 
 // コメント取得
