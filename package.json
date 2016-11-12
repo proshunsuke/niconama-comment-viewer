@@ -146,7 +146,6 @@
   },
   "dependencies": {
     "axios": "^0.15.2",
-    "cheerio": "^0.22.0",
     "electron-debug": "^1.0.1",
     "font-awesome": "^4.7.0",
     "react": "^15.3.2",
@@ -160,7 +159,8 @@
     "request-promise": "^4.1.1",
     "source-map-support": "^0.4.6",
     "superagent": "^2.3.0",
-    "tough-cookie-serialize": "^1.0.0"
+    "tough-cookie-serialize": "^1.0.0",
+    "x2js": "^3.0.1"
   },
   "devEngines": {
     "node": ">=6.x",
