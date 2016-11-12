@@ -2,11 +2,11 @@
 import rp from 'request-promise';
 import { SerializeCookieStore } from 'tough-cookie-serialize';
 
-const LOGIN_URL = 'https://secure.nicovideo.jp/secure/login';
+export const LOGIN_URL = 'https://secure.nicovideo.jp/secure/login';
 
-export default class NicoClient {
-  constructor() {}
-
+export default class User {
+  constructor() {
+  }
   login(email: string, password: string) {
     const cookieStore = rp.jar(new SerializeCookieStore);
     return rp.post(LOGIN_URL, {
@@ -21,7 +21,7 @@ export default class NicoClient {
       })
       .then((body) => {
         const session = cookieStore._jar.store.findCookie('nicovideo.jp', '/', 'user_session', (err, cookie) => {
-          if (cookie) { return cookie.value; }
+          if (cookie) { return `user_session=${cookie.value};`; }
           if (err) { return Promise.reject(err); }
           return Promise.reject('Cannot get user session. Please check your email or password.');
         });
