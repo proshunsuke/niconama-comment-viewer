@@ -14,6 +14,7 @@ export default class CommentInfo {
   yourpost: string;
   deleted: string;
   comment: string;
+  roomLabel: string;
   constructor(
     thread: string,
     no: string,
@@ -28,7 +29,8 @@ export default class CommentInfo {
     score: string,
     yourpost: string,
     deleted: string,
-    comment: string
+    comment: string,
+    roomLabel: string
   ) {
     this.thread = thread;
     this.no = no;
@@ -45,5 +47,6 @@ export default class CommentInfo {
     this.yourpost = yourpost;
     this.deleted = deleted;
     this.comment = comment;
+    this.roomLabel = roomLabel;
   }
 }
